@@ -11,7 +11,7 @@ const translations = {
     TR: "Sepetiniz boş",
     EN: "Your cart is empty",
   },
-  // buraya diğer mesajlar da eklenebilir
+
 };
 
 const ToastMessage = ({ messageKey, onClose }) => {
