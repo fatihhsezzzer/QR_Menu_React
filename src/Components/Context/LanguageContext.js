@@ -1,14 +1,14 @@
 import React, { createContext, useState } from "react";
 
-// Context oluşturma
+
 export const LanguageContext = createContext();
 
-// Context Provider
+
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("TR"); // Varsayılan dil: Türkçe
+  const [language, setLanguage] = useState("TR"); 
 
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "TR" ? "EN" : "TR")); // TR ve EN arasında geçiş
+    setLanguage((prevLanguage) => (prevLanguage === "TR" ? "EN" : "TR")); 
   };
 
   return (
