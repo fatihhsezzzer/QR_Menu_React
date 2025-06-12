@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext, useRef } from "react";
 import axios from "axios";
 import { LanguageContext } from "../Context/LanguageContext";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { Modal } from "react-bootstrap"; // React Bootstrap Modal bileşeni
+import { Modal } from "react-bootstrap"; 
 import { useCart } from "../Context/CartContext";
-import ToastMessage from "../Common/ToastMessage"; // doğru yolu gir
+import ToastMessage from "../Common/ToastMessage";
 import Preloader from "./Preloader";
 
 const FoodCategory = () => {
