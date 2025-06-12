@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
 
-// Başlangıç değeri
+
 const CartContext = createContext();
 
 const initialState = {
@@ -88,5 +88,5 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Hook
+
 export const useCart = () => useContext(CartContext);
