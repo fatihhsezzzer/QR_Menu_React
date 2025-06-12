@@ -19,7 +19,7 @@ const FoodCategory = () => {
 
   const { language } = useContext(LanguageContext);
 
-  const sectionRef = useRef(null); // Menü bölümü için referans
+  const sectionRef = useRef(null);
 
   const scrollToContent = () => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -92,7 +92,7 @@ const FoodCategory = () => {
     setOpenCategory((prevCategory) => {
       const newCategory = prevCategory === categoryId ? null : categoryId;
 
-      // Scroll işlemi biraz gecikmeli yapılmalı ki içerik açıldıktan sonra düzgün kayma olsun
+ 
       setTimeout(() => {
         if (newCategory && categoryRefs.current[newCategory]) {
           categoryRefs.current[newCategory].scrollIntoView({
@@ -100,13 +100,13 @@ const FoodCategory = () => {
             block: "start",
           });
 
-          // ScrollIntoView'dan sonra biraz daha yukarı kaydır
+        
           setTimeout(() => {
             window.scrollBy({
-              top: -50, // 👈 ne kadar yukarı istiyorsan burayı ayarla
+              top: -50, 
               behavior: "smooth",
             });
-          }, 400); // scrollIntoView işlemi bitince yapılması için kısa bir gecikme
+          }, 400); 
         }
       }, 100);
       return newCategory;
@@ -212,7 +212,7 @@ const FoodCategory = () => {
                           marginBottom: "10px",
                         }}
                       >
-                        {/* Üst satır: İsim ve fiyat */}
+                     
                         <div
                           style={{
                             display: "flex",
@@ -567,8 +567,7 @@ const FoodCategory = () => {
                   )}
                 </div>
 
-                {/* FİYAT BİLGİSİ */}
-                {/* FİYAT + SEPETE EKLE YAN YANA */}
+             
                 <div
                   style={{
                     display: "flex",
@@ -632,8 +631,8 @@ const FoodCategory = () => {
                 position: "absolute",
                 top: "10px",
                 right: "10px",
-                background: "#fff", // Arka plan beyaz
-                color: "#000", // Yazı (ikon) rengi siyah
+                background: "#fff", 
+                color: "#000", 
                 border: "none",
                 borderRadius: "50%",
                 width: "40px",
@@ -643,7 +642,7 @@ const FoodCategory = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.2)", // Hafif gölge
+                boxShadow: "0 2px 6px rgba(0,0,0,0.2)", 
               }}
             >
               ✖
