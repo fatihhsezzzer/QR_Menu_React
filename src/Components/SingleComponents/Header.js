@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LanguageContext } from "../Context/LanguageContext";
 import { useCart } from "../Context/CartContext";
 import { FaShoppingCart } from "react-icons/fa";
-import CartModal from "./CartModal"; // yolunu kendi projenle uyuşacak şekilde düzenle
+import CartModal from "./CartModal";
 
 const Header = () => {
   const { language, toggleLanguage } = useContext(LanguageContext);
@@ -82,7 +82,7 @@ const Header = () => {
                 {language === "TR" ? "Sepet" : "Cart"}
               </span>
 
-              {/* 🔴 Sepette ürün varsa kırmızı rozet göster */}
+         
               {cartItems.length > 0 && (
                 <span
                   className="position-absolute"
