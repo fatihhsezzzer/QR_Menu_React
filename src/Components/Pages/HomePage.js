@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // React Router'dan Link bileşenini import ediyoruz
+import { Link } from "react-router-dom";
 
 const FullScreenModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const FullScreenModal = () => {
         onClick={toggleModal}
       />
 
-      {/* Resmin altına eklenen metin */}
+  
       <div style={styles.startText} onClick={toggleModal}>
         Menü için buraya tıklayın!
       </div>
@@ -36,10 +36,10 @@ const FullScreenModal = () => {
                 background: "rgba(0,0,0,0.7)",
                 color: "white",
                 border: "none",
-                borderRadius: "50%", // TAM YUVARLAK OLMASI İÇİN
-                width: "31px !important", // Genişliği zorlamak için
-                height: "31px !important", // Yüksekliği zorlamak için
-                minWidth: "31px", // Başka bir CSS dosyasından genişlik almasını önlemek için
+                borderRadius: "50%", 
+                width: "31px !important", 
+                height: "31px !important",
+                minWidth: "31px", 
                 minHeight: "31px",
                 maxWidth: "31px",
                 maxHeight: "31px",
@@ -53,19 +53,19 @@ const FullScreenModal = () => {
               ✖
             </div>
 
-            {/* Menü Butonu (React Router ile yönlendirme) */}
+         
             <Link to="/menu" style={styles.linkButton}>
               <button style={styles.mainButton}>MENÜ</button>
             </Link>
 
-            {/* Görüş / Öneri Paylaş Butonu */}
+      
             <Link to="/feedback">
               <button style={styles.secondaryButton}>
                 Bizi Değerlendirin / Review Us
               </button>
             </Link>
 
-            {/* Alt Bilgi */}
+ 
 
             <p style={styles.agreementText}>
               Platformumuzu kullanarak{" "}
@@ -104,7 +104,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#000",
-    position: "relative", // Bu, metnin doğru konumlanması için gerekli
+    position: "relative", 
   },
   image: {
     width: "100%",
@@ -113,17 +113,17 @@ const styles = {
     cursor: "pointer",
   },
   startText: {
-    position: "absolute", // Metni konumlandırabilmek için absolute
-    bottom: "55%", // Görselin alt kısmına yakın
+    position: "absolute",
+    bottom: "55%", 
     width: "100%",
     textAlign: "center",
-    fontSize: "28px", // Başlangıç boyutu
-    fontFamily: "'Roboto', sans-serif", // Şık bir yazı tipi
+    fontSize: "28px", 
+    fontFamily: "'Roboto', sans-serif", 
     color: "#fff",
     fontWeight: "bold",
     letterSpacing: "2px",
-    zIndex: 1, // Görselin üstünde olması için
-    animation: "growShrink 3s ease-in-out infinite", // Animasyonu ekliyoruz
+    zIndex: 1, 
+    animation: "growShrink 3s ease-in-out infinite",
   },
   modalOverlay: {
     position: "fixed",
@@ -157,7 +157,7 @@ const styles = {
     cursor: "pointer",
   },
   linkButton: {
-    textDecoration: "none", // Link'in altı çizgili olmaması için
+    textDecoration: "none", 
   },
   mainButton: {
     width: "100%",
